@@ -1,6 +1,6 @@
 import './App.css'
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 import { Button, Message } from 'semantic-ui-react'
 
@@ -56,15 +56,15 @@ function App() {
        Hard time trying to use URL as in PetitionListe
     */
     const words = filterWords.split(' ')
-    const tags = words.filter(w => w.slice(0, 1) == '#' && w.length > 1)
-    const title = words.filter(w => w.slice(0, 1) != '#').join(' ').trim()
+    const tags = words.filter(w => w.slice(0, 1) === '#' && w.length > 1)
+    const title = words.filter(w => w.slice(0, 1) !== '#').join(' ').trim()
 
     for (let i = 0; i < tags.length; i++) {
       url += (i === 0 ? '?' : '&') + 'tag=' + tags[i].slice(1)
     }
-    if (title != "" && tags.length)
+    if (title !== "" && tags.length)
       url += "&title=" + title
-    else if (title != "")
+    else if (title !== "")
       url += "?title=" + title
 
     console.log(url)

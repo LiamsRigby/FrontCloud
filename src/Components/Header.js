@@ -67,7 +67,7 @@ const Header = (props) => {
                         </React.Fragment>
                         :
                         <GoogleLogin
-                            clientId='783652474514-hsrkuk75ikl453pu5fq2nf0m43q3qcsi.apps.googleusercontent.com'
+                            clientId='430963393571-7itq6p4onlaonvvcu4brhf3m5apksiaq.apps.googleusercontent.com'
                             buttonText='Connexion'
                             onSuccess={responseGoogleSuccess}
                             onFailure={responseGoogleFailure}

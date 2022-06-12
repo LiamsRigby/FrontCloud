@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 import { Button, Card, Icon, Popup } from 'semantic-ui-react'
 
@@ -13,11 +13,6 @@ const PetitionListe = (props) => {
     const [pageTokens, setPageTokens] = useState(['', '', '', '', '', '', '', '', '', ''])
 
     const [lastFetchedURL, setLastFetchedURL] = useState('')
-
-
-    useEffect(async () => {
-        await fetchAndUpdate(props.url, 1)
-    }, [props])
 
 
     const fetchAndUpdate = async (url, newPageNumber) => {
